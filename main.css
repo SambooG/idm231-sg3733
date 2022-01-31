@@ -1,0 +1,10 @@
+body{
+    background: aliceblue;
+}
+
+.wrapper{
+    max-width: 960px;
+    background-color: aliceblue;
+    margin: 15px auto; /*centering */
+}
+
