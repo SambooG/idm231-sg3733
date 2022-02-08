@@ -1,0 +1,2 @@
+Tony 
+    You see everything that's going on around you. You stay 5 moves ahead of others, enabling you to take advantage of situations others may not recognize. A lover of animals, you'd pick your race horse over a misbehaving memeber of the family any day.
