@@ -7,7 +7,6 @@ body{
 }
 
 .button{
-    background:none;
-    background-size: cover;
-    stroke: none;
+  border: 0;
+  background: transparent;
 }
