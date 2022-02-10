@@ -1,12 +1,24 @@
-
-
+@font-face {
+    font-family: mobsters;
+    src: url();
+}
+html{
+    font: 100%;
+}
 body{
     max-width: 1024px;
     background-color: black;
     margin: 15px auto; /*centering */
+    
+}
+
+.btn-img{
+    height: 12.5rem;
 }
 
 .button{
-  border: 0;
-  background: transparent;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
 }
+
