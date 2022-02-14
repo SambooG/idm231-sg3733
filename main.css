@@ -1,14 +1,19 @@
 @font-face {
     font-family: mobsters;
-    src: url();
+    src: 
+    local(font/Mobsters) format("truetype"), 
+    url(https://www.dafont.com/sopranos.font) format("truetype");
+    
 }
 html{
     font: 100%;
+    font-family: mobsters, Arial, Helvetica, sans-serif;
 }
 body{
     max-width: 1024px;
-    background-color: black;
+    background-color: rgb(32, 31, 31);
     margin: 15px auto; /*centering */
+    color:rgb(248, 245, 245);
     
 }
 
@@ -18,7 +23,19 @@ body{
 
 .button{
     background: transparent;
-    border: 0;
+    border: 1;
+    border-left-color: rgb(168, 8, 8);
+    border-top: none;
     cursor: pointer;
 }
 
+div
+
+.input-submit{
+    background: rgb(221, 219, 219);
+    border: 1;
+    border-color: rgb(94, 91, 91);
+    cursor: pointer;
+    filter: drop-shadow(3px 3px 3px whitesmoke);
+    /* how do I change the height? height is not working */
+}
