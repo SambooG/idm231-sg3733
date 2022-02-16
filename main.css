@@ -1,20 +1,18 @@
+:root{
+    --font:mobsters;
+}
 @font-face {
     font-family: mobsters;
     src: 
     local(font/Mobsters) format("truetype"), 
     url(https://www.dafont.com/sopranos.font) format("truetype");
-    
+    font-weight:lighter;
 }
-html{
-    font: 100%;
-    font-family: mobsters, Arial, Helvetica, sans-serif;
-}
+
 body{
     max-width: 1024px;
     background-color: rgb(32, 31, 31);
     margin: 15px auto; /*centering */
-    color:rgb(248, 245, 245);
-    
 }
 
 .btn-img{
@@ -29,7 +27,27 @@ body{
     cursor: pointer;
 }
 
-div
+.heading{
+    font-weight: lighter;
+    font-size: 2.5rem;
+}
+
+html{
+    
+    font-family: var(--font), Arial, Helvetica, sans-serif;
+    color:rgb(243, 239, 239);
+
+}
+
+.input{
+    font:var(--font);
+}
+
+.input-name{
+    letter-spacing: .03rem;
+    /* can't get font to change colors */
+    color: black ; 
+}
 
 .input-submit{
     background: rgb(221, 219, 219);
@@ -39,3 +57,7 @@ div
     filter: drop-shadow(3px 3px 3px whitesmoke);
     /* how do I change the height? height is not working */
 }
+
+.wrapper{
+    display:grid;
+} 
