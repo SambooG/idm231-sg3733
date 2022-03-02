@@ -4,15 +4,34 @@
 @font-face {
     font-family: mobsters;
     src: 
-    local(font/Mobsters) format("truetype"), 
-    url(https://www.dafont.com/sopranos.font) format("truetype");
+    /* local(font/Mobsters) format("truetype"), */
+    url('font/Mobsters.ttf')
+     format("truetype"); 
     font-weight:lighter;
 }
 
 body{
-    max-width: 1024px;
     background-color: rgb(32, 31, 31);
     margin: 15px auto; /*centering */
+    max-width: 1024px;
+
+}
+
+.bottom-row{
+    display:flex;
+    flex-direction: row;
+}
+
+/* top left button div */
+.btns-center-left-to-top-m{
+    display:flex;
+    justify-content: space-evenly;
+    /* padding: 40px; */
+}
+
+.btns-center-right-to-top-m{
+    display:flex;
+    /* justify-content: space-evenly; */
 }
 
 .btn-img{
@@ -26,10 +45,71 @@ body{
     border-top: none;
     cursor: pointer;
 }
+/* button positioning; diagonals top left div  */
+.button-carmela{
+    /* align-self: flex-end; */
+    margin:200px 15px 0 0px;
+}
+.button-junior{
+    /* align-self:center; */
+    margin:100px 15px 0px 15px;
+    
+}
+.button-tony{
+    align-self:flex-start;
+    margin:0px 15px 100px 15px;
+}
+/* button positioning; diagonals top right div  */
+.button-johnny{
+    /* align-self:flex-end; */
+    margin:0px 15px 0 200px;
+}
+.button-melfi{
+    /* align-self:center; */
+    margin:100px 15px 0px 15px;
+    
+}
+.button-livia{
+    /* align-self:flex-start; */
+    margin:200px 15px 0px 15px;
+}
 
+
+/* button positioning; diagonals bottom left div  */
+.button-paulie{
+    /* align-self:flex-end; */
+    margin:0px 15px 0 200px;
+}
+.button-aj{
+    /* align-self:center; */
+    margin:100px 15px 0px 15px;
+    
+}
+.button-sil{
+    /* align-self:flex-start; */
+    margin:200px 15px 0px 15px;
+}
+
+/* button positioning; diagonals bottom right div  */
+.button-adrianna{
+    /* align-self:flex-end; */
+    margin:0px 15px 0 200px;
+}
+.button-christopher{
+    /* align-self:center; */
+    margin:100px 15px 0px 15px;
+    
+}
+.button-janice{
+    /* align-self:flex-start; */
+    margin:200px 15px 0px 15px;
+}
+h1 
 .heading{
+    font-family: var(--font);
     font-weight: lighter;
     font-size: 2.5rem;
+    
 }
 
 html{
@@ -58,6 +138,10 @@ html{
     /* how do I change the height? height is not working */
 }
 
+.toprow{
+    display:flex;
+    flex-direction: row;
+}
 .wrapper{
-    display:grid;
+    /* display:grid; */
 } 
