@@ -1,19 +1,23 @@
 :root{
     --font:mobsters;
 }
+*{
+    font-weight:100;
+    box-sizing: border-box;
+}
 @font-face {
     font-family: mobsters;
     src: 
-    /* local(font/Mobsters) format("truetype"), */
+    local(font/Mobsters) format("truetype"), 
     url('font/Mobsters.ttf')
-     format("truetype"); 
-    font-weight:lighter;
+    format("truetype"); 
 }
 
 body{
     background-color: rgb(32, 31, 31);
-    margin: 15px auto; /*centering */
+    /* margin: 15px auto; centering */
     max-width: 1024px;
+    margin-top: 3rem;
 
 }
 
@@ -25,17 +29,23 @@ body{
 /* top left button div */
 .btns-center-left-to-top-m{
     display:flex;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
     /* padding: 40px; */
+    flex:1;
 }
 
 .btns-center-right-to-top-m{
     display:flex;
-    /* justify-content: space-evenly; */
+    justify-content: space-evenly;
+    flex:1;
+}
+
+.btns-center-right-to-bottom-m{
+    display: flex;
 }
 
 .btn-img{
-    height: 12.5rem;
+    height: 6rem;
 }
 
 .button{
@@ -57,12 +67,12 @@ body{
 }
 .button-tony{
     align-self:flex-start;
-    margin:0px 15px 100px 15px;
+    margin:0px 0px 100px 15px;
 }
 /* button positioning; diagonals top right div  */
 .button-johnny{
     /* align-self:flex-end; */
-    margin:0px 15px 0 200px;
+    margin:0px 15px 0 145px;
 }
 .button-melfi{
     /* align-self:center; */
@@ -78,38 +88,39 @@ body{
 /* button positioning; diagonals bottom left div  */
 .button-paulie{
     /* align-self:flex-end; */
-    margin:0px 15px 0 200px;
+    margin:0px 30px 0 0px;
 }
 .button-aj{
     /* align-self:center; */
-    margin:100px 15px 0px 15px;
+    margin:100px 15px 0px 5px;
     
 }
 .button-sil{
     /* align-self:flex-start; */
-    margin:200px 15px 0px 15px;
+    margin:200px 0px 0px 15px;
 }
 
 /* button positioning; diagonals bottom right div  */
 .button-adrianna{
     /* align-self:flex-end; */
-    margin:0px 15px 0 200px;
+    margin:200px 15px 15px 15px;
 }
 .button-christopher{
     /* align-self:center; */
-    margin:100px 15px 0px 15px;
+    margin:100px 15px 15px 15px;
     
 }
 .button-janice{
     /* align-self:flex-start; */
-    margin:200px 15px 0px 15px;
+    margin:15px 0px 0px 15px;
 }
-h1 
-.heading{
+h1.heading{
     font-family: var(--font);
-    font-weight: lighter;
     font-size: 2.5rem;
+    display: flex;
+    margin:.5rem
     
+   
 }
 
 html{
@@ -121,6 +132,8 @@ html{
 
 .input{
     font:var(--font);
+    /* display: flex; */
+    
 }
 
 .input-name{
@@ -141,7 +154,25 @@ html{
 .toprow{
     display:flex;
     flex-direction: row;
+    
 }
+
+.user-info{
+ 
+  display: flex; 
+    align-items:center;
+    /* text-align: center; */
+    /* align-self: center; */
+    flex-direction: column;
+    /* justify-content: flex-start; */
+    
+    
+}
+
 .wrapper{
-    /* display:grid; */
+    /* width: 1024px; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+   
 } 
