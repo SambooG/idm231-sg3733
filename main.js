@@ -1,4 +1,4 @@
-
+let help = "";
 const tonyBtn = document.getElementById('tony');
 const carmelaBtn = document.getElementById('carmela');
 const juniorBtn = document.getElementById('junior');
@@ -14,47 +14,50 @@ const janiceBtn = document.getElementById('janice');
 
 // creating event listeners on buttons
 tonyBtn.addEventListener('click', function(){
-    //doing stuff
+    
     userPicked('tony');
 });
 carmelaBtn.addEventListener('click', function(){
-    //doing stuff
+   
     userPicked('carmela');
 });
 juniorBtn.addEventListener('click', function(){
-    //doing stuff
+   
     userPicked('junior');
 });
 melfiBtn.addEventListener('click', function(){
-    //doing stuff
+   
     userPicked('melfi');
 });
 liviaBtn.addEventListener('click', function(){
-    //doing stuff
+   
     userPicked('livia');
 });paulieBtn.addEventListener('click', function(){
-    //doing stuff
+   
     userPicked('paulie');
 });ajBtn.addEventListener('click', function(){
-    //doing stuff
+   
     userPicked('aj');
 });silBtn.addEventListener('click', function(){
-    //doing stuff
+   
     userPicked('sil');
 });adriannaBtn.addEventListener('click', function(){
-    //doing stuff
+   
     userPicked('adrianna');
 });christopherBtn.addEventListener('click', function(){
-    //doing stuff
+   
     userPicked('christopher');
 });janiceBtn.addEventListener('click', function(){
-    //doing stuff
+   
     userPicked('janice');
 });johnnyBtn.addEventListener('click', function(){
-    //doing stuff
+   
     userPicked('johnny');
 });
-
+// helpBtn.addEventListener('click', function(){
+//     //doing stuff
+//     userPicked('help');
+// });
 
 //create function userPicked();
 function userPicked(buttonName){
@@ -93,7 +96,7 @@ function userPicked(buttonName){
             speakers.play();
             famMember.innerHTML = "You are Johnny Sacrimoni."
             famImage.src = 'images/jsack.jpg';
-            famCopy.innerHTML ="You are usually a pragmatic person and the go to for settling disputes. Don't your temper get the best of you though!"
+            famCopy.innerHTML ="You are usually a pragmatic person and the go to for settling disputes. Don't let your temper get the best of you though!"
             modal.hidden = !modal.hidden;
             break;
         case 'melfi':
@@ -101,7 +104,7 @@ function userPicked(buttonName){
             speakers.play();
             famMember.innerHTML = "You are Jennifer Melfi."
             famImage.src = 'images/melfi.jpg';
-            famCopy.innerHTML ="You're conflicted by duty and and the excitement of power. Most days are pretty normal, but watch out for a call about needing to go on the lamb."
+            famCopy.innerHTML ="You're conflicted by duty and and the excitement of power. Most days are pretty normal, but watch out for a call about needing to go on the lam."
             modal.hidden = !modal.hidden;
             break;
         case 'adrianna':
@@ -117,7 +120,7 @@ function userPicked(buttonName){
             speakers.play();
             famMember.innerHTML = "You are Paulie Walnuts."
             famImage.src = 'images/paulie.jpg';
-            famCopy.innerHTML ="Remember, gossip has it's costs. Don't tell the business to anyone outside of the family."
+            famCopy.innerHTML ="Remember, gossip has its costs. Don't tell the business to anyone outside of the family."
             modal.hidden = !modal.hidden;
             break;
         case 'livia':
@@ -125,7 +128,7 @@ function userPicked(buttonName){
             speakers.play();
             famMember.innerHTML = "You are Livia Soprano."
             famImage.src = 'images/livia.jpg';
-            famCopy.innerHTML ="You gave your life to your children on a silver platter and they dont appreciate it at all. You're also the only person in the family who doesn't curse."
+            famCopy.innerHTML ="You gave your life to your children on a silver platter, and they dont appreciate it at all. You're also the only person in the family who doesn't curse."
             modal.hidden = !modal.hidden;
             break;
         case 'christopher':
@@ -149,7 +152,7 @@ function userPicked(buttonName){
             speakers.play();
             famMember.innerHTML = "You are Janice Soprano."
             famImage.src = 'images/janice.jpg';
-            famCopy.innerHTML = "You might have a dark secret, but nobody will find out if you disappear for awhile. You're a scrapper and somehow manage to come out on top whenever you have troubles."
+            famCopy.innerHTML = "You might have a dark secret, but nobody will find out if you disappear for a while. You're a scrapper and somehow manage to come out on top whenever you have troubles."
             modal.hidden = !modal.hidden;
             break;
         case 'sil':
@@ -160,6 +163,11 @@ function userPicked(buttonName){
             famCopy.innerHTML ="Sometimes being the boss isn't all it's cracked up to be. There's nothing wrong with being second in command. Besides, you can still skim off the top from where you are."
             modal.hidden = !modal.hidden;
             break;
+            // case 'help':
+            // famMember.innerHTML = "All content copyright Home Box Office."
+            // famCopy.innerHTML ="Enter yours or anothers date of birth and click the 'click' button for a Sopranos zodiac. Click each photo to learn more about the characters."
+            // modal.hidden = !modal.hidden;
+            // break;
     default:
         // console.log('I was clicked')
     }
@@ -169,19 +177,15 @@ const userSubmitBtn = document.getElementById('submitBtn');
 
 // add Event Listener
 userSubmitBtn.addEventListener('click', function() {
-    //console.log('Submit button clicked!');
 
-    // const usersFirstName = document.getElementById('name').value;
-    //console.log('Users name is: ' + usersFirstName);
-
+    
     const userBday = new Date(document.getElementById('bday').value);
-    //console.log(userBday);
-
+    
     const whichMonth = userBday.getUTCMonth() + 1;
-    //console.log(`Users month is: ${whichMonth}`);
+   
 
     const whichDayOfMonth = userBday.getUTCDate();
-    //console.log(`Users birth day is: ${whichDayOfMonth}`);
+    
 
     // Zodiac Algorithm
     if ((whichMonth == 12 && whichDayOfMonth >= 22) || (whichMonth == 1 && whichDayOfMonth <= 19)) {
@@ -209,14 +213,55 @@ userSubmitBtn.addEventListener('click', function() {
     } else if ((whichMonth == 1 && whichDayOfMonth >= 20) || (whichMonth == 2 && whichDayOfMonth <= 18)) {
     AstroSign = "janice";
     }
+    // else {
+        // AstroSign="help";
+    // }
 
     console.log(AstroSign);
     userPicked(AstroSign);
 });
 
+// modal
 const modal = document.getElementById('modal');
 const modalCloseBtn = document.getElementById('btn-modal-close');
 modalCloseBtn.addEventListener('click', function() {
-    console.log('modal close clicked!');
     modal.hidden = !modal.hidden;
 })
+
+//  help button 
+const showHelpBox = () =>{
+
+    const helpBox = document.querySelector('.help-box');
+  
+    // show and hide box
+    if (help){
+        helpBox.style.display = "none";
+        help = false;
+    }
+    
+    else{
+        helpBox.style.display = "flex";
+        help = true;
+    }
+  
+    rectangle(help);
+  };
+  //  main box hide when help is in use and show when not in use
+function rectangle(hiding){
+    const mainRectangle = document.querySelector('.help-box-body');
+    if (hiding){
+      mainRectangle.style.display = "none";
+    }
+    else{
+      mainRectangle.style.display = "block";
+    }
+  }
+  //  event listener for help open button 
+  const helpOpenButton = document.querySelector('.help-button');
+  helpOpenButton.addEventListener('click', showHelpBox);
+  
+  //  event listener for help close button
+  const helpCloseButton = document.querySelector('.help-button-close');
+  helpCloseButton.addEventListener('click', showHelpBox);
+
+//   help button end 

@@ -16,11 +16,10 @@
 }
 
 body{
-    background-color: rgb(51, 45, 45);
-    /* margin: 15px auto; centering */
+    background-image: linear-gradient(to top, rgb(14, 0, 0), rgb(114, 111, 111));
     max-width: 1024px;
     margin-top: 3rem;
-
+    
 }
 
 .bottom-row{
@@ -31,8 +30,7 @@ body{
 /* top left button div */
 .btns-center-left-to-top-m{
     display:flex;
-    /* justify-content: space-evenly; */
-    /* padding: 40px; */
+    
     flex:1;
 }
 
@@ -59,13 +57,34 @@ body{
     border-left-style: groove;
     cursor: pointer;
 }
+/* button effect */
+ .button::before{ 
+    background: red;
+ content:'';
+ position: absolute;
+ transition: .5s;
+ transform: scale(.9);
+ z-index: -1;
+}
+
+.button:hover{
+    color: red;
+    box-shadow: 0 0 15px red;
+
+} 
+
+
 /* button positioning; diagonals top left div  */
 .button-carmela{
-    /* align-self: flex-end; */
     margin:200px 15px 0 0px;
 }
+
+/* .button-help{
+    border:none;
+    background-color: var(--border-color);
+    font-family: var(--font);
+} */
 .button-junior{
-    /* align-self:center; */
     margin:100px 15px 0px 15px;
     
 }
@@ -75,47 +94,39 @@ body{
 }
 /* button positioning; diagonals top right div  */
 .button-johnny{
-    /* align-self:flex-end; */
+    
     margin:0px 15px 0 145px;
 }
 .button-melfi{
-    /* align-self:center; */
     margin:100px 15px 0px 15px;
     
 }
 .button-livia{
-    /* align-self:flex-start; */
     margin:200px 15px 0px 15px;
 }
 
 
 /* button positioning; diagonals bottom left div  */
 .button-paulie{
-    /* align-self:flex-end; */
     margin:0px 30px 0 0px;
 }
 .button-aj{
-    /* align-self:center; */
     margin:100px 15px 0px 5px;
     
 }
 .button-sil{
-    /* align-self:flex-start; */
     margin:200px 0px 0px 15px;
 }
 
 /* button positioning; diagonals bottom right div  */
 .button-adrianna{
-    /* align-self:flex-end; */
     margin:200px 15px 15px 15px;
 }
 .button-christopher{
-    /* align-self:center; */
     margin:100px 15px 15px 15px;
     
 }
 .button-janice{
-    /* align-self:flex-start; */
     margin:0px 15px 0px 15px;
 }
 h1.heading{
@@ -128,7 +139,6 @@ h1.heading{
 }
 
 html{
-    
     font-family: var(--font), Arial, Helvetica, sans-serif;
     color:rgb(243, 239, 239);
 
@@ -139,10 +149,10 @@ html{
     
 }
 
-.input-name{
-    letter-spacing: .03rem;
-    /* can't get font to change colors */
-    color: black ; 
+.input-bday{
+    letter-spacing: .04rem;
+    filter: drop-shadow(1px 1px 1px white);
+   
 }
 
 .input-submit{
@@ -150,30 +160,24 @@ html{
     border: 1;
     border-color: rgb(94, 91, 91);
     cursor: pointer;
-    filter: drop-shadow(3px 3px 3px whitesmoke);
+    filter: drop-shadow(2.5px 2.5px 2.5px whitesmoke);
     /* how do I change the height? height is not working */
 }
 
 .toprow{
     display:flex;
     flex-direction: row;
-    
 }
 
 .user-info{
- 
   display: flex; 
     align-items:center;
-    /* text-align: center; */
-    /* align-self: center; */
     flex-direction: column;
-    /* justify-content: flex-start; */
     
     
 }
 
 .wrapper{
-    /* width: 1024px; */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -183,8 +187,87 @@ html{
 /* modal */
 
 
-
 .modal #famImage {
     max-width: 100px;
 }
 
+/* help button */
+
+.help-button-wrapper{
+    display: flex;
+    width: 60px;
+    height: 60px;
+    background-color: black;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+}
+.help-icon{
+    max-height: 45px;
+}
+.help-button-icon {
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: .5s;
+  z-index: 3;
+}
+.help-button-icon::before{
+    content: "";
+  position: absolute;
+  
+  transition: .5s;
+  z-index: 2;
+}
+.help-button-icon:hover{
+    transform: rotateY(360deg);
+}
+
+.help-button-close {
+    display: flex;
+    align-self: flex-end;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    margin: 10px;
+    
+}
+
+.help-close-icon {
+    border: none;
+    background: none;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 10px;
+    max-height: 40px;
+}
+.help-heading {
+    color: var(--border-color);
+    text-align: center;
+    font-size: 3rem;
+    font-family: var(--font), sans-serif;
+    padding: 5px;
+}
+
+.help-box-body {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: rgba(41, 40, 40, 0.8);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 35px;
+    margin: 20px 0;
+    text-align: center;
+}
+.help-sub-heading {
+    font-size: 2rem;
+}
+
+
+/* help end */
