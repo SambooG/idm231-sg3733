@@ -68,7 +68,7 @@ function userPicked(buttonName){
 
     switch (buttonName){
         case 'tony':
-            speakers.src = 'sounds/tony-bing.wav';
+            speakers.src = 'sounds/tony-bing.mp3';
             speakers.play();
             famMember.innerHTML = "You are Tony Soprano."
             famImage.src = 'images/tony.jpg';
@@ -92,7 +92,7 @@ function userPicked(buttonName){
             modal.hidden = !modal.hidden;    
         break;
         case 'johnny':
-            speakers.src = 'sounds/johnny.wav';
+            speakers.src = 'sounds/johnny.mp3';
             speakers.play();
             famMember.innerHTML = "You are Johnny Sacrimoni."
             famImage.src = 'images/jsack.jpg';
@@ -108,7 +108,7 @@ function userPicked(buttonName){
             modal.hidden = !modal.hidden;
             break;
         case 'adrianna':
-            speakers.src = 'sounds/Adrianna1.wav';
+            speakers.src = 'sounds/Adrianna.mp3';
             speakers.play();
             famMember.innerHTML = "You are Adrianna."
             famImage.src = 'images/adriana.jpg';
@@ -124,7 +124,7 @@ function userPicked(buttonName){
             modal.hidden = !modal.hidden;
             break;
         case 'livia':
-            speakers.src = 'sounds/Livia.wav';
+            speakers.src = 'sounds/janlivia.mp3';
             speakers.play();
             famMember.innerHTML = "You are Livia Soprano."
             famImage.src = 'images/livia.jpg';
@@ -132,7 +132,7 @@ function userPicked(buttonName){
             modal.hidden = !modal.hidden;
             break;
         case 'christopher':
-            speakers.src = 'sounds/christpha.wav';
+            speakers.src = 'sounds/christpha.mp3';
             speakers.play();
             famMember.innerHTML = "You are Christopher Moltisanti."
             famImage.src = 'images/christaphaop.jpg';
